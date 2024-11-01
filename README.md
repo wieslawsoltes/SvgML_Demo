@@ -1,5 +1,7 @@
 # SvgML Demo
 
+SvgML adds support for embedding SVG images directly within Avalonia's inline XAML code.
+
 ## Install NuGet Package
 
 https://www.nuget.org/packages/SvgML
