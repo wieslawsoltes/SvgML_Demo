@@ -5,7 +5,7 @@
 https://www.nuget.org/packages/SvgML
 
 ```xml
-https://www.nuget.org/packages/SvgML/11.0.0-alpha.1
+https://www.nuget.org/packages/SvgML/11.0.0-alpha.2
 ```
 
 ## svg xmlns
