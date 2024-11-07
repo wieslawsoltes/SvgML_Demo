@@ -1137,6 +1137,70 @@
       </svg>
     </TabItem>
 
+    
+    <TabItem Header="roughpaper Animation">
+      
+      <TabItem.Styles>
+        <Style Selector=":is(feDiffuseLighting).animate">
+          <Setter Property="surfaceScale" Value="1.0"/>
+          <Style.Animations>
+            <Animation Duration="0:0:5" IterationCount="Infinite" PlaybackDirection="Normal">
+              <KeyFrame Cue="0%">
+                <Setter Property="surfaceScale" Value="1.0"/>
+              </KeyFrame>
+              <KeyFrame Cue="50%">
+                <Setter Property="surfaceScale" Value="25.0"/>
+              </KeyFrame>
+              <KeyFrame Cue="100%">
+                <Setter Property="surfaceScale" Value="1.0"/>
+              </KeyFrame>
+            </Animation>
+          </Style.Animations>
+        </Style>
+      </TabItem.Styles>
+      
+      <svg width="650" height="500">
+
+        <filter id='roughpaper' x='0%' y='0%' width='100%' height="100%">
+
+          <feTurbulence type="fractalNoise" baseFrequency='0.04' result='noise' numOctaves="5" />
+
+          <feDiffuseLighting in='noise' lighting-color='white' Classes="animate">
+            <feDistantLight azimuth='45' elevation='60' />
+          </feDiffuseLighting>
+
+        </filter>
+
+        <rect x="0" y="0" width="100%" height="100%" filter="url(#roughpaper)" fill="none" />
+      </svg>
+      
+    </TabItem>
+    
+    <TabItem Header="rect animation">
+
+      <TabItem.Styles>
+        <Style Selector=":is(rect)[id=r2]">
+          <Setter Property="x" Value="0%"/>
+          <Style.Animations>
+            <Animation Duration="0:0:1" IterationCount="Infinite" PlaybackDirection="Alternate">
+              <KeyFrame Cue="0%">
+                <Setter Property="x" Value="0%"/>
+              </KeyFrame>
+              <KeyFrame Cue="100%">
+                <Setter Property="x" Value="90%"/>
+              </KeyFrame>
+            </Animation>
+          </Style.Animations>
+        </Style>
+      </TabItem.Styles>
+      
+      <svg viewBox="0 0 500 500">
+        <rect width="100%" height="100%" fill="lightgray" />
+        <rect width="10%" height="10%" y="45%" fill="green" id="r2" />
+      </svg>
+
+    </TabItem>
+    
   </TabControl>
 
 </Window>
