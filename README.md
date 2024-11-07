@@ -7,7 +7,7 @@ SvgML adds support for embedding SVG images directly within Avalonia's inline XA
 https://www.nuget.org/packages/SvgML
 
 ```xml
-<PackageReference Include="SvgML" Version="11.0.0-alpha.3" />
+<PackageReference Include="SvgML" Version="11.0.0-alpha.4" />
 ```
 
 ## svg xmlns
