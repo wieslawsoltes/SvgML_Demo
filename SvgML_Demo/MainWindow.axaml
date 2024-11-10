@@ -103,56 +103,6 @@
       </Panel>
     </TabItem>
     
-    <TabItem Header="filters-gauss-01-b.svg + Slider">
-      <Panel Width="400" Height="400">
-        <svg preserveAspectRatio="xMidYMid meet"  id="svg-root"
-             width="100%" height="100%" viewBox="0 0 480 360">
-          <title id="test-title">$RCSfile: filters-gauss-01-b.svg,v $</title>
-          <defs>
-            <font-face font-family="SVGFreeSansASCII">
-              <font-face-src>
-                <font-face-uri href="../resources/SVGFreeSans.svg#ascii"/>
-              </font-face-src>
-            </font-face>
-          </defs>
-          <g id="test-body-content" font-family="SVGFreeSansASCII,sans-serif" font-size="18">
-            <defs>
-              <g id="rects">
-                <rect x="0" y="0" width="90" height="90" fill="blue"/>
-                <rect x="45" y="45" width="90" height="90" fill="yellow"/>
-              </g>
-              <g id="rect_outlines">
-                <rect x="0" y="0" width="135" height="135" fill="none" stroke="blue" stroke-width=".5"/>
-                <rect x="-13.5" y="-13.5" width="162" height="162" fill="none" stroke="blue" stroke-width=".5"/>
-              </g>
-              <filter id="blur" filterUnits="objectBoundingBox" x="-10%" y="-10%" width="120%" height="120%">
-                <feGaussianBlur stdDeviation="{Binding #stdDeviation.Value, Mode=OneWay}"/>
-              </filter>
-              <filter id="blurxy" filterUnits="objectBoundingBox" x="-10%" y="-10%" width="120%" height="120%">
-                <feGaussianBlur stdDeviation="20 1"/>
-              </filter>
-            </defs>
-            <use href="#rects"/>
-            <g transform="translate(310,15)">
-              <use href="#rects" filter="url(#blur)"/>
-              <use href="#rect_outlines"/>
-            </g>
-            <g transform="translate(310,200)">
-              <use href="#rects" filter="url(#blurxy)"/>
-              <use href="#rect_outlines"/>
-            </g>
-          </g>
-          <g font-family="SVGFreeSansASCII,sans-serif" font-size="32">
-            <text id="revision" x="10" y="340" stroke="none" fill="black">$Revision: 1.7 $</text>
-          </g>
-          <rect id="test-frame" x="1" y="1" width="478" height="358" fill="none" stroke="#000000"/>
-        </svg>
-
-        <Slider Name="stdDeviation" Value="10" Minimum="0" Maximum="20" SmallChange="1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1" />
-        
-      </Panel>
-    </TabItem>
-    
     <TabItem Header="filters-turb-01-f.svg">
        <svg id="svg-root" width="100%" height="100%" viewBox="0 0 480 360">
   
